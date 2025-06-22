@@ -113,7 +113,7 @@ input, select, textarea {
 }
 
 /* Responsive stack on smaller screens */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 480px) {
   .education-card {
     flex: 1 1 45%;
     max-width: 100%;
