@@ -174,9 +174,11 @@ input, select, textarea {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  text-align: center;
   padding-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 
 .education-card {
   background: #f2f2f2;
@@ -185,10 +187,10 @@ input, select, textarea {
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   transition: background 0.3s ease;
-  flex: 1 1 28%;
-  max-width: 30%;
-  min-width: 250px;
+  flex: 1 1 300px;       /* Let it shrink if needed */
+  max-width: 100%;       /* Removes hard constraint */
 }
+
 
 .education-card:hover {
   background: #e0e0e0;
@@ -217,26 +219,21 @@ input, select, textarea {
 
 /* ========== Responsive: Mobile Optimized ========== */
 @media screen and (max-width: 768px) {
-  .education-grid {
-    flex-direction: column;
-    align-items: center;
+  .education-card {
+    width: 90%;         /* Ensures it doesn't go full-width edge-to-edge */
+    padding: 1.5rem;
   }
 
-  .education-card {
-    flex: 1 1 100%;
-    max-width: 90%;
-    padding: 1.5rem 1rem;
+  .edu-logo {
+    width: 70px;
   }
 
   .education-card h4,
   .education-card p {
     font-size: 1rem;
   }
-
-  .edu-logo {
-    width: 70px;
-  }
 }
+
 
 
 /* Custom Intro Layout - Rahul */
