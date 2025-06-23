@@ -86,14 +86,6 @@ input, select, textarea {
   flex-direction: column; /* Desktop default: image left, text right */
 }
 
-.featured-img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  max-width: 100%;
-}
-
 .featured-content {
   flex: 1;
 }
@@ -119,7 +111,7 @@ input, select, textarea {
     padding: 1.5rem;
   }
 
-  .featured-project img {
+  .featured-img {
     width: 100% !important;
     height: auto !important;
     object-fit: cover;
