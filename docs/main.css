@@ -80,17 +80,18 @@ input, select, textarea {
   gap: 2rem;
   align-items: center;
   background: white;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  flex-direction: row; /* Desktop default: image left, text right */
+  flex-direction: column; /* Desktop default: image left, text right */
 }
 
 .featured-img {
-  width: 50%;
+  width: 100%;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
+  max-width: 100%;
 }
 
 .featured-content {
@@ -98,8 +99,8 @@ input, select, textarea {
 }
 
 .featured-button {
-  display: inline-block;
-  margin-top: 1rem;
+  display: block;
+  margin-top: 1rem auto 0;
   padding: 0.85em 2em;
   background-color: #2f2f2f;
   color: white;
