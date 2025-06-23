@@ -115,18 +115,20 @@ input, select, textarea {
 /* Mobile Override: stack image on top */
 @media screen and (max-width: 768px) {
   .featured-project {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* stack image above text */
+    padding: 1rem;
   }
-
   .featured-img {
     width: 100%;
+    height: auto;
+    max-width: 100%;
   }
-
   .featured-button {
-    margin: 1rem auto 0 auto;
+    display: block;
+    margin: 1rem auto 0;
   }
 }
+
 
 
 /* ========== Education Section Styles ========== */
@@ -146,15 +148,13 @@ input, select, textarea {
 }
 
 .education-card {
-  flex: 1 1 280px;
-  max-width: 320px;
+  flex: 1 1 100%;
+  max-width: 90%;
+  min-width: auto;
   background: #f2f2f2;
-  border-radius: 1rem;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  transition: background 0.3s ease;
+  padding: 1.5rem;
 }
+
 
 
 .education-card:hover {
