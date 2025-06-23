@@ -112,7 +112,7 @@ input, select, textarea {
   }
 
   .featured-img {
-    width: 100% !important;
+    width: auto !important;
     height: auto !important;
     object-fit: cover;
     border-radius: 12px;
