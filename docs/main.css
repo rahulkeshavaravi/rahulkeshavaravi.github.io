@@ -112,22 +112,32 @@ input, select, textarea {
   transition: background-color 0.3s ease;
 }
 
-/* Mobile Override: stack image on top */
 @media screen and (max-width: 768px) {
   .featured-project {
-    flex-direction: column; /* stack image above text */
-    padding: 1rem;
+    flex-direction: column !important;
+    text-align: center;
+    padding: 1.5rem;
   }
-  .featured-img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
+
+  .featured-project img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
   }
-  .featured-button {
-    display: block;
+
+  .featured-project .featured-button {
+    display: inline-block;
     margin: 1rem auto 0;
+    width: auto;
+  }
+
+  .featured-project .featured-content {
+    padding: 0;
   }
 }
+
 
 
 
