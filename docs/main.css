@@ -73,29 +73,48 @@ input, select, textarea {
 
 /* Basic */
 
-/* === Featured Project Section === */
-
+/* === Featured Project Fix === */
 .featured-project {
   display: flex;
-  gap: 2rem;
   align-items: center;
-  background: white;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: row;
+  background-color: white;
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  flex-direction: row; /* Side-by-side on desktop */
   flex-wrap: wrap;
 }
 
 .featured-img {
-  width: 45%;
+  width: 100%;
   max-width: 400px;
   height: auto;
-  object-fit: cover;
   border-radius: 12px;
+  object-fit: cover;
   flex-shrink: 0;
 }
 
+.featured-content {
+  flex: 1;
+  min-width: 260px;
+}
+
+.featured-button {
+  display: inline-block;
+  background-color: #2f2f2f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(122, 104, 255, 0.3);
+}
+
+/* === Responsive Fix for Mobile === */
 @media screen and (max-width: 768px) {
   .featured-project {
     flex-direction: column;
@@ -106,19 +125,14 @@ input, select, textarea {
   .featured-img {
     width: 100%;
     max-width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .featured-button {
-    display: inline-block;
     margin: 1rem auto 0;
   }
-
-  .featured-content {
-    padding: 0;
-  }
 }
+
 
 
 
