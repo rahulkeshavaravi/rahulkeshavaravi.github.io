@@ -80,56 +80,45 @@ input, select, textarea {
   gap: 2rem;
   align-items: center;
   background: white;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  flex-direction: column; /* Desktop default: image left, text right */
+  flex-direction: row; /* Side-by-side on desktop */
+  flex-wrap: wrap;
 }
 
-.featured-content {
-  flex: 1;
-}
-
-.featured-button {
-  display: block;
-  margin-top: 1rem auto 0;
-  padding: 0.85em 2em;
-  background-color: #2f2f2f;
-  color: white;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 4px 12px rgba(122, 104, 255, 0.45);
-  transition: background-color 0.3s ease;
+.featured-img {
+  width: 45%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
 }
 
 @media screen and (max-width: 768px) {
   .featured-project {
-    flex-direction: column !important;
+    flex-direction: column;
     text-align: center;
     padding: 1.5rem;
   }
 
   .featured-img {
-    width: auto !important;
-    height: 100% !important;
-    object-fit: cover;
-    border-radius: 12px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 1rem;
   }
 
-  .featured-project .featured-button {
+  .featured-button {
     display: inline-block;
     margin: 1rem auto 0;
-    width: auto;
   }
 
-  .featured-project .featured-content {
+  .featured-content {
     padding: 0;
   }
 }
-
 
 
 
